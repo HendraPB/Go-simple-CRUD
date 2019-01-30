@@ -1,0 +1,49 @@
+{{ define "Detail" }}
+  	{{ template "Header" }}
+  		<div>
+	    	<div class="container">
+		        <div class="table-wrapper">
+		            <div class="table-title">
+		                <div class="row">
+		                    <div class="col-sm-6">
+								<h2>Manage <b>Employees</b></h2>
+							</div>
+		                </div>
+		            </div>
+		            <form>
+						<div class="modal-header">						
+							<h4 class="modal-title">Employee Detail</h4>
+						</div>
+						<div class="modal-body">					
+					        <div class="row">
+					            <div class="col-md-6">
+					                <div class="expertise-item">
+					                    <h3>Name</h3>
+					                    <p>{{ .Name }}</p>
+					                </div>
+					            </div>
+					            <div class="col-md-6">
+					                <div class="expertise-item">
+					                    <h3>Email </h3>
+					                    <p>{{ .Email }}</p>
+					                </div>
+					            </div>
+					        </div>
+					        <div class="row">
+					            <div class="col-md-12">
+					                <div class="expertise-item">
+					                    <h3>Address</h3>
+					                    <p>{{ .City }}</p>
+					                </div>
+					            </div>
+					        </div>
+						</div>
+						<div class="modal-footer">
+							<input type="button" class="btn btn-default" data-dismiss="modal" value="Back" onclick="location.href='/'">
+						</div>
+					</form>
+		        </div>
+		    </div>
+		</div>
+	{{ template "Footer" }}
+{{ end }}
