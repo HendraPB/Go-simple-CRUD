@@ -12,9 +12,13 @@ git clone https://github.com/HendraPB/Go-simple-CRUD.git
 # change your directory to project directory
 cd Go-simple-CRUD
 
-# install project package
-go get -u github.com/go-sql-driver/mysql
-go get -u github.com/astaxie/beego
+# install package manager
+go get -u github.com/Masterminds/glide && export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# install project dependency
+glide install
+
+# install bee CLI
 go get -u github.com/beego/bee
 
 # running migrations
